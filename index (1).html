@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173F2B">
+  <title>LF AgroTech | Pesquisa agrícola confiável</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--dark:#173F2B;--leaf:#4D9564;--bg:#F5F7F3;--text:#343A36;--line:#E5EAE5}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:Poppins,Arial,sans-serif;color:var(--text)}
+    button,input{font:inherit}button{cursor:pointer}a{color:var(--dark)}
+    .topbar{background:#fff;border-bottom:1px solid var(--line)}.topbar-content{max-width:1260px;margin:auto;min-height:90px;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{text-decoration:none;font-size:24px;font-weight:700;color:var(--dark);display:flex;align-items:center;gap:9px}.brand-icon{width:28px;height:28px;fill:none;stroke:var(--leaf);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    .nav{display:flex;gap:32px;font-size:15px}.nav a{text-decoration:none;font-weight:500}.nav a:hover{text-decoration:underline}
+    main{max-width:1260px;margin:auto;padding:84px 32px 70px}.hero{max-width:870px}.hero h1{color:var(--dark);font-size:44px;line-height:1.27;font-weight:600;letter-spacing:-1.2px;margin:0 0 26px}.hero p{font-size:18px;line-height:1.75;margin:0 0 44px;max-width:720px}
+    label{display:block;font-weight:600;color:var(--dark);font-size:15px;margin:0 0 10px}.searchform{display:flex;gap:10px;max-width:910px}.searchinput{flex:1;min-width:0;height:64px;background:#fff;border:1px solid #bfcfc1;border-radius:9px;padding:0 22px;color:var(--text);outline-offset:3px}.searchinput:focus{outline:2px solid var(--leaf)}
+    .primary{border:none;background:var(--dark);color:#fff;border-radius:9px;padding:0 24px;font-weight:600;min-height:64px;white-space:nowrap}.primary:hover{background:#205a3c}
+    .hint{color:#667269;font-size:13px;margin:14px 0 26px;line-height:1.65}
+    .filters{margin-top:34px;display:none}.filters h2,.results h2,.sources h2{color:var(--dark);font-size:22px;font-weight:600}.filterbuttons{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 22px}
+    .chip{border-radius:999px;border:1px solid var(--leaf);background:#fff;padding:9px 16px;color:var(--dark);font-size:14px;font-weight:500}.chip.selected{background:var(--dark);border-color:var(--dark);color:#fff}
+    .results{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 28px;margin-top:18px;min-height:170px;box-shadow:0 4px 20px #173f2b09}
+    .results h2{margin:0 0 6px}.searched{margin:0 0 12px;color:#67766b;font-size:14px}.status{font-size:14px;color:#67766b;line-height:1.6}
+    .fallback{background:#f0f7f0;border:1px solid #d7e8d8;padding:13px 15px;border-radius:9px;font-size:13px;line-height:1.65;margin-top:16px}.fallback a{font-weight:600}.fallback a + a{margin-left:14px}
+    .sources{margin-top:75px}.sources h2{margin:0 0 18px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:23px;min-height:118px}.card strong{display:block;color:var(--dark);font-size:17px;margin-bottom:8px}.card span{font-size:12px;color:#667269;line-height:1.65}
+    .footer{border-top:1px solid var(--line);background:#fff;padding:25px 32px;text-align:center;font-size:12px;color:#6b746d}
+    /* O campo de busca da LF AgroTech substitui o campo padrão do Google. */
+    .gsc-control-cse form.gsc-search-box{display:none!important}
+    .gsc-control-cse{padding:10px 0!important;border:none!important;background:#fff!important;font-family:Poppins,Arial,sans-serif!important}.gsc-webResult.gsc-result{border-bottom:1px solid var(--line)!important;padding:18px 0!important}.gs-title{font-family:Poppins,Arial,sans-serif!important}.gs-title a{color:var(--dark)!important}.gsc-cursor-page{color:var(--dark)!important}
+    @media(max-width:730px){.topbar-content{padding:0 20px;min-height:70px}.brand{font-size:20px}.nav{gap:14px;font-size:12px}.nav a:nth-child(2){display:none}main{padding:65px 20px}.hero h1{font-size:31px;letter-spacing:-.5px}.hero p{font-size:15px;margin-bottom:34px}.searchform{display:block}.searchinput{width:100%;height:58px}.primary{width:100%;margin-top:10px;min-height:56px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.results{padding:17px 14px}.filterbuttons{gap:8px}.chip{padding:8px 11px;font-size:12px}}
+  </style>
+  <script async src="https://cse.google.com/cse.js?cx=54bdb979c687e49ab"></script>
+</head>
+<body>
+  <header class="topbar"><div class="topbar-content">
+    <a href="#inicio" class="brand" aria-label="LF AgroTech, início">
+      <svg class="brand-icon" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 25V12M14 17C7 17 4 13 4 6c7 0 10 4 10 11ZM14 12c0-6 4-9 10-9 0 7-4 11-10 11"/></svg>
+      LF AgroTech
+    </a>
+    <nav class="nav"><a href="#inicio">Início</a><a href="#fontes">Fontes confiáveis</a><a href="#resultados">Resultados</a></nav>
+  </div></header>
+  <main id="inicio">
+    <section class="hero">
+      <h1>Pesquisa agrícola confiável para transformar conhecimento em prática.</h1>
+      <p>Encontre informações agrícolas em fontes confiáveis, como Embrapa, MAPA, AgroLink e SciELO.</p>
+    </section>
+    <section aria-label="Pesquisa agrícola">
+      <form id="formBusca" class="searchform-wrap">
+        <label for="consulta">O que você deseja pesquisar na área agrícola?</label>
+        <div class="searchform">
+          <input type="search" id="consulta" class="searchinput" name="q" placeholder="Ex.: Praga do milho" autocomplete="off" required maxlength="250">
+          <button type="submit" class="primary">Pesquisar nas 4 fontes</button>
+        </div>
+      </form>
+      <p class="hint">A pesquisa consulta páginas indexadas pelo Google nas fontes selecionadas. Os resultados aparecem abaixo, na própria LF AgroTech.</p>
+    </section>
+    <section class="filters" id="filtros" aria-label="Filtrar resultados por fonte">
+      <h2>Filtrar resultados</h2>
+      <div class="filterbuttons">
+        <button type="button" class="chip selected" data-source="all" aria-pressed="true">Todas as fontes</button>
+        <button type="button" class="chip" data-source="embrapa" aria-pressed="false">Embrapa</button>
+        <button type="button" class="chip" data-source="mapa" aria-pressed="false">MAPA</button>
+        <button type="button" class="chip" data-source="agrolink" aria-pressed="false">AgroLink</button>
+        <button type="button" class="chip" data-source="scielo" aria-pressed="false">SciELO</button>
+      </div>
+    </section>
+    <section class="results" id="resultados" aria-label="Resultados da pesquisa" aria-live="polite">
+      <h2>Resultados da pesquisa agrícola</h2>
+      <p class="searched" id="searched"></p>
+      <p class="status" id="status">Digite um assunto no campo acima para iniciar a pesquisa.</p>
+      <div class="gcse-search" data-gname="agroresults" data-autoSearchOnLoad="false" data-linkTarget="_blank"></div>
+      <div class="fallback">
+        Se os resultados não aparecerem aqui, <a id="abrirPesquisa" href="https://cse.google.com/cse?cx=54bdb979c687e49ab" target="_blank" rel="noopener noreferrer">abra a pesquisa em outra aba</a>.
+        <a id="pesquisaAlternativa" href="https://www.google.com/search?q=agricultura" target="_blank" rel="noopener noreferrer">Pesquisa alternativa no Google</a>.
+      </div>
+    </section>
+    <section class="sources" id="fontes">
+      <h2>Fontes confiáveis de pesquisa</h2>
+      <div class="cards">
+        <div class="card"><strong>Embrapa</strong><span>Pesquisa científica e tecnologias agropecuárias.</span></div>
+        <div class="card"><strong>MAPA</strong><span>Informações, programas e normas do Ministério da Agricultura.</span></div>
+        <div class="card"><strong>AgroLink</strong><span>Notícias, conteúdos técnicos e informações do agronegócio.</span></div>
+        <div class="card"><strong>SciELO</strong><span>Artigos e periódicos científicos.</span></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">LF AgroTech · Pesquisa agrícola em fontes externas · Resultados de busca disponibilizados pelo Google Programmable Search Engine.</footer>
+  <script>
+    (function(){
+      'use strict';
+      const CX='54bdb979c687e49ab';
+      const domains={all:'',embrapa:'site:embrapa.br',mapa:'site:gov.br/agricultura',agrolink:'site:agrolink.com.br',scielo:'site:scielo.br'};
+      const labels={all:'Todas as fontes',embrapa:'Embrapa',mapa:'MAPA',agrolink:'AgroLink',scielo:'SciELO'};
+      const input=document.getElementById('consulta'),filters=document.getElementById('filtros'),results=document.getElementById('resultados'),status=document.getElementById('status');
+      let baseQuery='',selected='all';
+      function query(){return baseQuery+(domains[selected]?' '+domains[selected]:'');}
+      function updateLinks(){let q=query();document.getElementById('abrirPesquisa').href='https://cse.google.com/cse?cx='+encodeURIComponent(CX)+'&q='+encodeURIComponent(q);
+        const sites=selected==='all'?'(site:embrapa.br OR site:gov.br/agricultura OR site:agrolink.com.br OR site:scielo.br)':domains[selected];
+        document.getElementById('pesquisaAlternativa').href='https://www.google.com/search?q='+encodeURIComponent(baseQuery+' '+sites);
+      }
+      function getGoogleElement(){
+        try {
+          const api=window.google?.search?.cse?.element;
+          if(!api) return null;
+          const named=api.getElement('agroresults');
+          if(named && typeof named.execute==='function') return named;
+          const all=api.getAllElements();
+          for(const item of Object.values(all||{})){
+            if(item && typeof item.execute==='function') return item;
+          }
+          return null;
+        } catch(e){return null;}
+      }
+      function execute(attempt){const element=getGoogleElement();
+        if(element){try{element.execute(query());status.textContent='Busca enviada. Os resultados serão exibidos abaixo quando carregarem.';return;}catch(e){/* Fallback permanece disponível. */}}
+        if(attempt<40){setTimeout(()=>execute(attempt+1),250);}else{status.textContent='Não foi possível carregar o componente de resultados do Google nesta página. Experimente o link de pesquisa em outra aba logo abaixo.';}
+      }
+      function search(){baseQuery=input.value.trim();if(!baseQuery){input.focus();return;}
+        filters.style.display='block';results.style.display='block';document.getElementById('searched').textContent='Pesquisa: '+baseQuery+' · '+labels[selected];
+        status.textContent='Carregando os resultados dentro da LF AgroTech...';updateLinks();execute(0);results.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+      document.getElementById('formBusca').addEventListener('submit',e=>{e.preventDefault();selected='all';selectSource('all',false);search();});
+      function selectSource(source,rerun){selected=source;document.querySelectorAll('.chip').forEach(chip=>{let active=chip.dataset.source===source;chip.classList.toggle('selected',active);chip.setAttribute('aria-pressed',String(active));});if(baseQuery&&rerun)search();}
+      document.querySelectorAll('.chip').forEach(chip=>chip.addEventListener('click',()=>selectSource(chip.dataset.source,true)));
+      const initial=new URLSearchParams(location.search).get('q');if(initial){input.value=initial;search();}
+    })();
+  </script>
+</body>
+</html>
