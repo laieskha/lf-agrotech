@@ -3,129 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#173F2B">
-  <title>LF AgroTech | Pesquisa agrícola confiável</title>
+  <meta name="theme-color" content="#11431A">
+  <meta name="description" content="LF AgroTech — Pesquisa agrícola inteligente em Embrapa, MAPA, AgroLink e SciELO.">
+  <title>LF AgroTech | Pesquisa agrícola inteligente</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--dark:#173F2B;--leaf:#4D9564;--bg:#F5F7F3;--text:#343A36;--line:#E5EAE5}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:Poppins,Arial,sans-serif;color:var(--text)}
-    button,input{font:inherit}button{cursor:pointer}a{color:var(--dark)}
-    .topbar{background:#fff;border-bottom:1px solid var(--line)}.topbar-content{max-width:1260px;margin:auto;min-height:90px;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{text-decoration:none;font-size:24px;font-weight:700;color:var(--dark);display:flex;align-items:center;gap:9px}.brand-icon{width:28px;height:28px;fill:none;stroke:var(--leaf);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-    .nav{display:flex;gap:32px;font-size:15px}.nav a{text-decoration:none;font-weight:500}.nav a:hover{text-decoration:underline}
-    main{max-width:1260px;margin:auto;padding:84px 32px 70px}.hero{max-width:870px}.hero h1{color:var(--dark);font-size:44px;line-height:1.27;font-weight:600;letter-spacing:-1.2px;margin:0 0 26px}.hero p{font-size:18px;line-height:1.75;margin:0 0 44px;max-width:720px}
-    label{display:block;font-weight:600;color:var(--dark);font-size:15px;margin:0 0 10px}.searchform{display:flex;gap:10px;max-width:910px}.searchinput{flex:1;min-width:0;height:64px;background:#fff;border:1px solid #bfcfc1;border-radius:9px;padding:0 22px;color:var(--text);outline-offset:3px}.searchinput:focus{outline:2px solid var(--leaf)}
-    .primary{border:none;background:var(--dark);color:#fff;border-radius:9px;padding:0 24px;font-weight:600;min-height:64px;white-space:nowrap}.primary:hover{background:#205a3c}
-    .hint{color:#667269;font-size:13px;margin:14px 0 26px;line-height:1.65}
-    .filters{margin-top:34px;display:none}.filters h2,.results h2,.sources h2{color:var(--dark);font-size:22px;font-weight:600}.filterbuttons{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 22px}
-    .chip{border-radius:999px;border:1px solid var(--leaf);background:#fff;padding:9px 16px;color:var(--dark);font-size:14px;font-weight:500}.chip.selected{background:var(--dark);border-color:var(--dark);color:#fff}
-    .results{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 28px;margin-top:18px;min-height:170px;box-shadow:0 4px 20px #173f2b09}
-    .results h2{margin:0 0 6px}.searched{margin:0 0 12px;color:#67766b;font-size:14px}.status{font-size:14px;color:#67766b;line-height:1.6}
-    .fallback{background:#f0f7f0;border:1px solid #d7e8d8;padding:13px 15px;border-radius:9px;font-size:13px;line-height:1.65;margin-top:16px}.fallback a{font-weight:600}.fallback a + a{margin-left:14px}
-    .sources{margin-top:75px}.sources h2{margin:0 0 18px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:23px;min-height:118px}.card strong{display:block;color:var(--dark);font-size:17px;margin-bottom:8px}.card span{font-size:12px;color:#667269;line-height:1.65}
-    .footer{border-top:1px solid var(--line);background:#fff;padding:25px 32px;text-align:center;font-size:12px;color:#6b746d}
-    /* O campo de busca da LF AgroTech substitui o campo padrão do Google. */
-    .gsc-control-cse form.gsc-search-box{display:none!important}
-    .gsc-control-cse{padding:10px 0!important;border:none!important;background:#fff!important;font-family:Poppins,Arial,sans-serif!important}.gsc-webResult.gsc-result{border-bottom:1px solid var(--line)!important;padding:18px 0!important}.gs-title{font-family:Poppins,Arial,sans-serif!important}.gs-title a{color:var(--dark)!important}.gsc-cursor-page{color:var(--dark)!important}
-    @media(max-width:730px){.topbar-content{padding:0 20px;min-height:70px}.brand{font-size:20px}.nav{gap:14px;font-size:12px}.nav a:nth-child(2){display:none}main{padding:65px 20px}.hero h1{font-size:31px;letter-spacing:-.5px}.hero p{font-size:15px;margin-bottom:34px}.searchform{display:block}.searchinput{width:100%;height:58px}.primary{width:100%;margin-top:10px;min-height:56px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.results{padding:17px 14px}.filterbuttons{gap:8px}.chip{padding:8px 11px;font-size:12px}}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
   <script async src="https://cse.google.com/cse.js?cx=54bdb979c687e49ab"></script>
 </head>
 <body>
-  <header class="topbar"><div class="topbar-content">
-    <a href="#inicio" class="brand" aria-label="LF AgroTech, início">
-      <svg class="brand-icon" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 25V12M14 17C7 17 4 13 4 6c7 0 10 4 10 11ZM14 12c0-6 4-9 10-9 0 7-4 11-10 11"/></svg>
-      LF AgroTech
+  <!-- Ícones lineares, sem bibliotecas externas. -->
+  <svg aria-hidden="true" class="svg-library" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-house" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2-10-1v14c4-1 7-1 10 1 3-2 6-2 10-1V5c-4-1-7-1-10 1zM12 6v14"/></symbol>
+    <symbol id="icon-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3" cy="6" r=".6"/><circle cx="3" cy="12" r=".6"/><circle cx="3" cy="18" r=".6"/></symbol>
+    <symbol id="icon-bookmark" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-arrow-diagonal" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+  </svg>
+
+  <button class="mobile-menu-button" type="button" id="mobileMenuToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="sidebar">
+    <svg class="icon"><use href="#icon-menu"></use></svg>
+  </button>
+  <div id="sidebarBackdrop" class="sidebar-backdrop" hidden></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="Navegação da LF AgroTech">
+    <a href="#inicio" class="brand" aria-label="LF AgroTech — Início">
+      <span class="brand-mark">LF</span>
+      <span class="brand-name-wrap"><strong class="brand-name">AgroTech</strong><small>INTELIGÊNCIA NO CAMPO</small></span>
     </a>
-    <nav class="nav"><a href="#inicio">Início</a><a href="#fontes">Fontes confiáveis</a><a href="#resultados">Resultados</a></nav>
-  </div></header>
-  <main id="inicio">
-    <section class="hero">
-      <h1>Pesquisa agrícola confiável para transformar conhecimento em prática.</h1>
-      <p>Encontre informações agrícolas em fontes confiáveis, como Embrapa, MAPA, AgroLink e SciELO.</p>
-    </section>
-    <section aria-label="Pesquisa agrícola">
-      <form id="formBusca" class="searchform-wrap">
-        <label for="consulta">O que você deseja pesquisar na área agrícola?</label>
-        <div class="searchform">
-          <input type="search" id="consulta" class="searchinput" name="q" placeholder="Ex.: Praga do milho" autocomplete="off" required maxlength="250">
-          <button type="submit" class="primary">Pesquisar nas 4 fontes</button>
+
+    <div class="sidebar-navigation">
+      <p class="sidebar-eyebrow">ESPAÇO DE PESQUISA</p>
+      <nav aria-label="Menu principal" class="nav-links">
+        <a class="nav-link is-active" href="#inicio" data-nav="inicio"><svg class="icon"><use href="#icon-house"></use></svg><span>Início</span><span class="nav-status-dot" aria-hidden="true"></span></a>
+        <a class="nav-link" href="#pesquisa" data-nav="pesquisa"><svg class="icon"><use href="#icon-search"></use></svg><span>Pesquisar</span></a>
+        <a class="nav-link" href="#fontes" data-nav="fontes"><svg class="icon"><use href="#icon-book"></use></svg><span>Fontes</span></a>
+        <a class="nav-link" href="#resultados" data-nav="resultados"><svg class="icon"><use href="#icon-list"></use></svg><span>Resultados</span></a>
+        <a class="nav-link" href="#favoritos" data-nav="favoritos"><svg class="icon"><use href="#icon-bookmark"></use></svg><span>Favoritos</span></a>
+        <a class="nav-link" href="#sobre" data-nav="sobre"><svg class="icon"><use href="#icon-info"></use></svg><span>Sobre</span></a>
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="sidebar-message">
+        <span class="sidebar-message-tag">DA CIÊNCIA À PRÁTICA</span>
+        <strong>Conhecimento que<br>faz o campo evoluir.</strong>
+        <p>Explore fontes confiáveis<br>e encontre novos caminhos.</p>
+      </div>
+      <div class="sidebar-footer"><span>LF AgroTech</span><small>Pesquisa. Conexão. Evolução.</small></div>
+    </div>
+  </aside>
+
+  <div class="page-shell" id="inicio">
+    <header class="top-header">
+      <div class="top-heading"><span>PLATAFORMA DE PESQUISA AGRÍCOLA</span><p>Seu próximo avanço começa aqui.</p></div>
+      <div class="source-count"><svg class="icon"><use href="#icon-check"></use></svg> 4 fontes de referência</div>
+    </header>
+
+    <main>
+      <section class="hero" id="pesquisa" aria-labelledby="heroTitle">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <span class="hero-kicker">CONHECIMENTO QUE CULTIVA O FUTURO</span>
+            <h1 id="heroTitle">Pesquisa agrícola inteligente<br class="desktop-break"> para transformar informação<br class="desktop-break"> em prática.</h1>
+            <p>Pesquise em fontes confiáveis como Embrapa, MAPA, AgroLink e SciELO<br class="desktop-break"> com uma experiência moderna e profissional.</p>
+          </div>
+          <div class="hero-actions">
+            <form class="search-form" id="searchForm" role="search">
+              <svg class="icon search-icon"><use href="#icon-search"></use></svg>
+              <label class="sr-only" for="searchInput">O que você quer descobrir sobre o agro?</label>
+              <input id="searchInput" type="search" name="q" placeholder="O que você quer descobrir sobre o agro?" autocomplete="off" maxlength="250" required>
+              <button class="search-submit" type="submit"><span>Pesquisar nas 4 fontes</span><svg class="icon"><use href="#icon-arrow-right"></use></svg></button>
+            </form>
+            <div class="source-filter-row" role="group" aria-label="Pesquisar por fonte">
+              <span class="filter-label">BUSCAR EM</span>
+              <div class="source-filters">
+                <button class="source-pill is-selected" data-source="all" aria-pressed="true" type="button">Todas as fontes</button>
+                <button class="source-pill" data-source="embrapa" aria-pressed="false" type="button">Embrapa</button>
+                <button class="source-pill" data-source="mapa" aria-pressed="false" type="button">MAPA</button>
+                <button class="source-pill" data-source="agrolink" aria-pressed="false" type="button">AgroLink</button>
+                <button class="source-pill" data-source="scielo" aria-pressed="false" type="button">SciELO</button>
+              </div>
+            </div>
+            <p class="hero-footnote">Uma busca. Quatro perspectivas para ir além.</p>
+          </div>
         </div>
-      </form>
-      <p class="hint">A pesquisa consulta páginas indexadas pelo Google nas fontes selecionadas. Os resultados aparecem abaixo, na própria LF AgroTech.</p>
-    </section>
-    <section class="filters" id="filtros" aria-label="Filtrar resultados por fonte">
-      <h2>Filtrar resultados</h2>
-      <div class="filterbuttons">
-        <button type="button" class="chip selected" data-source="all" aria-pressed="true">Todas as fontes</button>
-        <button type="button" class="chip" data-source="embrapa" aria-pressed="false">Embrapa</button>
-        <button type="button" class="chip" data-source="mapa" aria-pressed="false">MAPA</button>
-        <button type="button" class="chip" data-source="agrolink" aria-pressed="false">AgroLink</button>
-        <button type="button" class="chip" data-source="scielo" aria-pressed="false">SciELO</button>
-      </div>
-    </section>
-    <section class="results" id="resultados" aria-label="Resultados da pesquisa" aria-live="polite">
-      <h2>Resultados da pesquisa agrícola</h2>
-      <p class="searched" id="searched"></p>
-      <p class="status" id="status">Digite um assunto no campo acima para iniciar a pesquisa.</p>
-      <div class="gcse-search" data-gname="agroresults" data-autoSearchOnLoad="false" data-linkTarget="_blank"></div>
-      <div class="fallback">
-        Se os resultados não aparecerem aqui, <a id="abrirPesquisa" href="https://cse.google.com/cse?cx=54bdb979c687e49ab" target="_blank" rel="noopener noreferrer">abra a pesquisa em outra aba</a>.
-        <a id="pesquisaAlternativa" href="https://www.google.com/search?q=agricultura" target="_blank" rel="noopener noreferrer">Pesquisa alternativa no Google</a>.
-      </div>
-    </section>
-    <section class="sources" id="fontes">
-      <h2>Fontes confiáveis de pesquisa</h2>
-      <div class="cards">
-        <div class="card"><strong>Embrapa</strong><span>Pesquisa científica e tecnologias agropecuárias.</span></div>
-        <div class="card"><strong>MAPA</strong><span>Informações, programas e normas do Ministério da Agricultura.</span></div>
-        <div class="card"><strong>AgroLink</strong><span>Notícias, conteúdos técnicos e informações do agronegócio.</span></div>
-        <div class="card"><strong>SciELO</strong><span>Artigos e periódicos científicos.</span></div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">LF AgroTech · Pesquisa agrícola em fontes externas · Resultados de busca disponibilizados pelo Google Programmable Search Engine.</footer>
-  <script>
-    (function(){
-      'use strict';
-      const CX='54bdb979c687e49ab';
-      const domains={all:'',embrapa:'site:embrapa.br',mapa:'site:gov.br/agricultura',agrolink:'site:agrolink.com.br',scielo:'site:scielo.br'};
-      const labels={all:'Todas as fontes',embrapa:'Embrapa',mapa:'MAPA',agrolink:'AgroLink',scielo:'SciELO'};
-      const input=document.getElementById('consulta'),filters=document.getElementById('filtros'),results=document.getElementById('resultados'),status=document.getElementById('status');
-      let baseQuery='',selected='all';
-      function query(){return baseQuery+(domains[selected]?' '+domains[selected]:'');}
-      function updateLinks(){let q=query();document.getElementById('abrirPesquisa').href='https://cse.google.com/cse?cx='+encodeURIComponent(CX)+'&q='+encodeURIComponent(q);
-        const sites=selected==='all'?'(site:embrapa.br OR site:gov.br/agricultura OR site:agrolink.com.br OR site:scielo.br)':domains[selected];
-        document.getElementById('pesquisaAlternativa').href='https://www.google.com/search?q='+encodeURIComponent(baseQuery+' '+sites);
-      }
-      function getGoogleElement(){
-        try {
-          const api=window.google?.search?.cse?.element;
-          if(!api) return null;
-          const named=api.getElement('agroresults');
-          if(named && typeof named.execute==='function') return named;
-          const all=api.getAllElements();
-          for(const item of Object.values(all||{})){
-            if(item && typeof item.execute==='function') return item;
-          }
-          return null;
-        } catch(e){return null;}
-      }
-      function execute(attempt){const element=getGoogleElement();
-        if(element){try{element.execute(query());status.textContent='Busca enviada. Os resultados serão exibidos abaixo quando carregarem.';return;}catch(e){/* Fallback permanece disponível. */}}
-        if(attempt<40){setTimeout(()=>execute(attempt+1),250);}else{status.textContent='Não foi possível carregar o componente de resultados do Google nesta página. Experimente o link de pesquisa em outra aba logo abaixo.';}
-      }
-      function search(){baseQuery=input.value.trim();if(!baseQuery){input.focus();return;}
-        filters.style.display='block';results.style.display='block';document.getElementById('searched').textContent='Pesquisa: '+baseQuery+' · '+labels[selected];
-        status.textContent='Carregando os resultados dentro da LF AgroTech...';updateLinks();execute(0);results.scrollIntoView({behavior:'smooth',block:'start'});
-      }
-      document.getElementById('formBusca').addEventListener('submit',e=>{e.preventDefault();selected='all';selectSource('all',false);search();});
-      function selectSource(source,rerun){selected=source;document.querySelectorAll('.chip').forEach(chip=>{let active=chip.dataset.source===source;chip.classList.toggle('selected',active);chip.setAttribute('aria-pressed',String(active));});if(baseQuery&&rerun)search();}
-      document.querySelectorAll('.chip').forEach(chip=>chip.addEventListener('click',()=>selectSource(chip.dataset.source,true)));
-      const initial=new URLSearchParams(location.search).get('q');if(initial){input.value=initial;search();}
-    })();
-  </script>
+      </section>
+
+      <!-- Aparece somente após uma pesquisa. A página inicial permanece como no Figma. -->
+      <section class="results-panel" id="resultados" aria-labelledby="resultHeading" hidden>
+        <div class="section-top results-heading">
+          <div><span class="section-kicker">SUA PESQUISA</span><h2 id="resultHeading">Resultados da pesquisa agrícola</h2><p id="querySummary"></p></div>
+          <button id="saveQuery" class="save-query" type="button" aria-label="Salvar pesquisa nos favoritos"><svg class="icon"><use href="#icon-bookmark"></use></svg><span>Salvar pesquisa</span></button>
+        </div>
+        <p class="search-status" id="searchStatus" role="status" aria-live="polite">Carregando resultados...</p>
+        <div class="google-results"><div class="gcse-searchresults-only" data-gname="agroresults" data-autoSearchOnLoad="false" data-linkTarget="_blank"></div></div>
+        <div class="search-alternatives">Se os resultados não aparecerem, <a id="cseExternalLink" href="https://cse.google.com/cse?cx=54bdb979c687e49ab" target="_blank" rel="noopener noreferrer">abra no Google</a> ou tente uma <a id="googleExternalLink" href="https://www.google.com/search?q=agricultura" target="_blank" rel="noopener noreferrer">pesquisa alternativa</a>.</div>
+      </section>
+
+      <section class="favorites-panel" id="favoritos" aria-labelledby="favoritesTitle" hidden>
+        <div class="section-top"><div><span class="section-kicker">CONSULTAS SALVAS</span><h2 id="favoritesTitle">Suas pesquisas favoritas</h2><p>Salvas neste navegador, neste dispositivo.</p></div></div>
+        <div class="favorites-list" id="favoritesList"></div>
+      </section>
+
+      <section class="sources-section" id="fontes" aria-labelledby="sourcesTitle">
+        <div class="section-top">
+          <div><h2 id="sourcesTitle">Conhecimento de quem entende do campo.</h2><p>Quatro fontes de referência. Diferentes caminhos para a mesma evolução.</p></div>
+          <span class="section-right">EXPLORE AS FONTES</span>
+        </div>
+        <div class="source-cards">
+          <article class="source-card">
+            <div class="source-image">
+        <img
+        src="img/embrapa.jpg"
+        alt="Pesquisadora avaliando mudas em uma estufa agrícola"
+        loading="lazy"
+            >
+            <span class="image-category">PESQUISA E TECNOLOGIA</span>
+            </div>
+            <div class="source-info"><h3>Embrapa</h3><p>Ciência e soluções para uma<br> agricultura mais sustentável.</p><button type="button" data-explore="embrapa" class="explore-link">Explorar fonte <svg class="icon"><use href="#icon-arrow-diagonal"></use></svg></button></div>
+          </article>
+          <article class="source-card">
+            <div class="source-image"><img src="img/mapa.png" alt="Visão aérea de uma propriedade agrícola com instalações de produção" loading="lazy"><span class="image-category">POLÍTICAS E REGULAÇÃO</span></div>
+            <div class="source-info"><h3>MAPA</h3><p>Informações oficiais, normas<br> e diretrizes para o setor agro.</p><button type="button" data-explore="mapa" class="explore-link">Explorar fonte <svg class="icon"><use href="#icon-arrow-diagonal"></use></svg></button></div>
+          </article>
+          <article class="source-card">
+            <div class="source-image"><img src="img/agrolink.png" alt="Plantação de trigo iluminada pelo sol" loading="lazy"><span class="image-category">INFORMAÇÃO DO AGRO</span></div>
+            <div class="source-info"><h3>AgroLink</h3><p>Notícias, cotações e conteúdos<br> para o dia a dia no campo.</p><button type="button" data-explore="agrolink" class="explore-link">Explorar fonte <svg class="icon"><use href="#icon-arrow-diagonal"></use></svg></button></div>
+          </article>
+          <article class="source-card">
+            <div class="source-image"><img src="img/scielo.png" alt="Microscópio e plantas em um laboratório de pesquisa" loading="lazy"><span class="image-category">PRODUÇÃO CIENTÍFICA</span></div>
+            <div class="source-info"><h3>SciELO</h3><p>Artigos e estudos científicos<br> para aprofundar sua pesquisa.</p><button type="button" data-explore="scielo" class="explore-link">Explorar fonte <svg class="icon"><use href="#icon-arrow-diagonal"></use></svg></button></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="innovation-banner" id="sobre" aria-labelledby="innovationTitle">
+        <div class="innovation-content"><span class="innovation-kicker">INOVAÇÃO AGRÍCOLA</span><h2 id="innovationTitle">O futuro do agro começa com conhecimento.</h2><p>Conecte ciência, tecnologia e informação às decisões no campo.</p><a href="#fontes" class="innovation-link">Conheça a LF AgroTech <svg class="icon"><use href="#icon-arrow-diagonal"></use></svg></a></div>
+      </section>
+    </main>
+    <footer class="site-footer"><span>© LF AgroTech • Conhecimento para cultivar o futuro.</span><span>Embrapa&nbsp; · &nbsp;MAPA&nbsp; · &nbsp;AgroLink&nbsp; · &nbsp;SciELO</span></footer>
+  </div>
 </body>
 </html>
