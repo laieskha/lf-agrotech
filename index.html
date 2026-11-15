@@ -11,7 +11,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
-  <script async src="https://cse.google.com/cse.js?cx=54bdb979c687e49ab"></script>
+  <!-- O campo de busca é o da LF AgroTech; o Google exibe somente os resultados.
+       O callback precisa ser declarado antes do carregamento de cse.js. -->
+  <script>
+    window.__gcse = {
+      parsetags: 'onload',
+      searchCallbacks: {
+        web: {
+          rendered: function (gname) {
+            if (gname !== 'agroresults') return;
+            const aviso = document.getElementById('searchStatus');
+            if (aviso) aviso.textContent = 'Resultados carregados pelo Google. Confira a origem de cada publicação.';
+          }
+        }
+      }
+    };
+  </script>
+  <script id="googleCseScript" async src="https://cse.google.com/cse.js?cx=54bdb979c687e49ab"></script>
 </head>
 <body>
   <!-- Ícones lineares, sem bibliotecas externas. -->
@@ -105,7 +121,7 @@
           <button id="saveQuery" class="save-query" type="button" aria-label="Salvar pesquisa nos favoritos"><svg class="icon"><use href="#icon-bookmark"></use></svg><span>Salvar pesquisa</span></button>
         </div>
         <p class="search-status" id="searchStatus" role="status" aria-live="polite">Carregando resultados...</p>
-        <div class="google-results"><div class="gcse-searchresults-only" data-gname="agroresults" data-autoSearchOnLoad="false" data-linkTarget="_blank"></div></div>
+        <div class="google-results"><div id="googleResults" class="gcse-searchresults-only" data-gname="agroresults" data-autoSearchOnLoad="false" data-linkTarget="_blank"></div></div>
         <div class="search-alternatives">Se os resultados não aparecerem, <a id="cseExternalLink" href="https://cse.google.com/cse?cx=54bdb979c687e49ab" target="_blank" rel="noopener noreferrer">abra no Google</a> ou tente uma <a id="googleExternalLink" href="https://www.google.com/search?q=agricultura" target="_blank" rel="noopener noreferrer">pesquisa alternativa</a>.</div>
       </section>
 
@@ -121,14 +137,7 @@
         </div>
         <div class="source-cards">
           <article class="source-card">
-            <div class="source-image">
-        <img
-        src="img/embrapa.jpg"
-        alt="Pesquisadora avaliando mudas em uma estufa agrícola"
-        loading="lazy"
-            >
-            <span class="image-category">PESQUISA E TECNOLOGIA</span>
-            </div>
+            <div class="source-image"><img src="img/embrapa.jpg" alt="Pesquisadora avaliando mudas em uma estufa agrícola" loading="lazy"><span class="image-category">PESQUISA E TECNOLOGIA</span></div>
             <div class="source-info"><h3>Embrapa</h3><p>Ciência e soluções para uma<br> agricultura mais sustentável.</p><button type="button" data-explore="embrapa" class="explore-link">Explorar fonte <svg class="icon"><use href="#icon-arrow-diagonal"></use></svg></button></div>
           </article>
           <article class="source-card">
