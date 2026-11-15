@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0B1B0E"><meta name="description" content="Calculadoras agronômicas LF AgroTech: semeadura, população, calagem, gessagem, fertilizantes, pulverização e produtividade.">
+<title>Central de Cálculos Agronômicos | LF AgroTech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="calculadoras.css">
+<script defer src="calculadoras.js"></script>
+</head>
+<body>
+<svg aria-hidden="true" class="svg-library" xmlns="http://www.w3.org/2000/svg">
+<symbol id="icon-house" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></symbol>
+<symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+<symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2-10-1v14c4-1 7-1 10 1 3-2 6-2 10-1V5c-4-1-7-1-10 1zM12 6v14"/></symbol>
+<symbol id="icon-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3" cy="6" r=".6"/><circle cx="3" cy="12" r=".6"/><circle cx="3" cy="18" r=".6"/></symbol>
+<symbol id="icon-calculator" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><rect x="7" y="5" width="10" height="4" rx=".5"/><path d="M8 13h1M12 13h1M16 13h1M8 17h1M12 17h1M16 17h1"/></symbol>
+<symbol id="icon-bookmark" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></symbol>
+<symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+<symbol id="icon-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+<symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+<symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+</svg>
+<button class="mobile-menu-button" type="button" id="mobileMenuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar"><svg class="icon"><use href="#icon-menu"></use></svg></button>
+<div id="sidebarBackdrop" class="sidebar-backdrop" hidden></div>
+<aside class="sidebar" id="sidebar" aria-label="Menu da LF AgroTech">
+<a class="brand" href="index.html#inicio"><span class="brand-mark">LF</span><span class="brand-name-wrap"><strong class="brand-name">AgroTech</strong><small>INTELIGÊNCIA NO CAMPO</small></span></a>
+<div class="sidebar-navigation"><p class="sidebar-eyebrow">ESPAÇO DE PESQUISA</p><nav class="nav-links" aria-label="Navegação principal">
+<a class="nav-link" href="index.html#inicio"><svg class="icon"><use href="#icon-house"></use></svg><span>Início</span></a>
+<a class="nav-link" href="index.html#pesquisa"><svg class="icon"><use href="#icon-search"></use></svg><span>Pesquisar</span></a>
+<a class="nav-link" href="index.html#fontes"><svg class="icon"><use href="#icon-book"></use></svg><span>Fontes</span></a>
+<a class="nav-link" href="index.html#resultados"><svg class="icon"><use href="#icon-list"></use></svg><span>Resultados</span></a>
+<a class="nav-link is-active" href="calculadoras.html" aria-current="page"><svg class="icon"><use href="#icon-calculator"></use></svg><span>Calculadoras</span><span class="nav-status-dot" aria-hidden="true"></span></a>
+<a class="nav-link" href="index.html#favoritos"><svg class="icon"><use href="#icon-bookmark"></use></svg><span>Favoritos</span></a>
+<a class="nav-link" href="index.html#sobre"><svg class="icon"><use href="#icon-info"></use></svg><span>Sobre</span></a>
+</nav></div><div class="sidebar-bottom"><div class="sidebar-message"><span class="sidebar-message-tag">DA CIÊNCIA À PRÁTICA</span><strong>Calcule com clareza.<br>Decida com fundamento.</strong><p>Oito culturas, diversas operações e fórmulas explicadas.</p></div><div class="sidebar-footer"><span>LF AgroTech</span><small>Pesquisa. Conexão. Evolução.</small></div></div>
+</aside>
+<div class="page-shell" id="inicio"><header class="top-header"><div class="top-heading"><span>FERRAMENTAS AGRONÔMICAS</span><p>Planejamento para diferentes regiões do Brasil.</p></div><div class="source-count"><svg class="icon"><use href="#icon-check"></use></svg> 8 culturas · 7 cálculos</div></header>
+<main class="calc-main">
+<section class="calc-hero" aria-labelledby="calcTitle"><div class="calc-hero-content"><span class="calc-kicker">LF AGROTECH / CENTRAL AGRONÔMICA</span><h1 id="calcTitle">O conhecimento<br>vira cálculo<span class="dot">.</span></h1><p>Selecione sua cultura, região e sistema de cultivo. Faça cálculos transparentes e consulte os critérios técnicos.</p><div class="calc-hero-tags"><span>8 CULTURAS</span><span>BRASIL INTEIRO</span><span>FÓRMULAS EXPLICADAS</span></div></div><div class="calc-hero-mark" aria-hidden="true"><svg class="icon"><use href="#icon-calculator"></use></svg></div></section>
+<div class="calc-section-heading"><div><span class="section-kicker">SEU PLANEJAMENTO</span><h2>Central de cálculos agronômicos</h2><p>Configure a propriedade e escolha a ferramenta que deseja utilizar.</p></div><span class="calc-stage">Versão inicial funcional</span></div>
+<form id="agroForm" novalidate>
+<section class="work-panel profile-panel" aria-labelledby="profileTitle"><div class="panel-head"><div><span class="mini-caption">01 / CONTEXTO DA LAVOURA</span><h3 id="profileTitle">Dados do cultivo</h3></div><span class="round-icon">01</span></div>
+<div class="field-grid three-cols">
+<div class="calc-field"><label for="crop">Cultura</label><select id="crop" name="crop"><option value="milho">Milho</option><option value="soja">Soja</option><option value="trigo">Trigo</option><option value="arroz">Arroz</option><option value="sorgo">Sorgo</option><option value="girassol">Girassol</option><option value="feijao">Feijão</option><option value="cana">Cana-de-açúcar</option></select></div>
+<div class="calc-field"><label for="uf">Estado (UF)</label><select id="uf" name="uf" required></select></div>
+<div class="calc-field"><label for="city">Município</label><select id="city" name="city"><option value="">Selecione o estado</option></select><input id="cityManual" name="cityManual" type="text" placeholder="Digite o município" maxlength="100" hidden><small id="cityMessage">Municípios via API pública do IBGE.</small></div>
+<div class="calc-field"><label for="water">Sistema hídrico</label><select id="water" name="water"><option value="sequeiro">Sequeiro</option><option value="irrigado">Irrigado</option></select></div>
+<div class="calc-field"><label for="planting">Sistema de implantação</label><select id="planting" name="planting"><option value="direto">Plantio direto</option><option value="convencional">Plantio convencional</option><option value="minimo">Cultivo mínimo</option><option value="transplantio">Transplantio / mudas</option><option value="outro">Outro / conforme a cultura</option></select></div>
+<div class="calc-field"><label for="area">Área a utilizar nos cálculos (ha)</label><input type="text" id="area" inputmode="decimal" value="1" placeholder="Ex.: 12,5"><small>1 ha = 10.000 m².</small></div>
+<div class="calc-field" id="waterDetail" hidden><label for="irrigation">Método de irrigação</label><select id="irrigation"><option value="aspersao">Aspersão</option><option value="pivo">Pivô central</option><option value="gotejamento">Gotejamento</option><option value="micro">Microaspersão</option><option value="sulco">Sulcos</option><option value="outro">Outro</option></select></div>
+<div class="calc-field"><label for="yieldGoal">Produtividade esperada (t/ha, opcional)</label><input id="yieldGoal" type="text" inputmode="decimal" placeholder="Ex.: 6,5"></div>
+</div></section>
+<section class="work-panel" aria-labelledby="chooseTitle"><div class="panel-head"><div><span class="mini-caption">02 / SELEÇÃO DO CÁLCULO</span><h3 id="chooseTitle">O que deseja calcular?</h3></div></div>
+
+<div class="tool-grid" role="group" aria-label="Cálculos disponíveis">
+<button type="button" class="tool-btn is-active" data-tool="semeadura" aria-pressed="true"><span class="tool-emoji">🌾</span><span>Semeadura</span><small>Sementes por metro</small></button>
+<button type="button" class="tool-btn" data-tool="populacao" aria-pressed="false"><span class="tool-emoji">🌱</span><span>População</span><small>Plantas por hectare</small></button>
+<button type="button" class="tool-btn" data-tool="calagem" aria-pressed="false"><span class="tool-emoji">🚜</span><span>Calagem</span><small>Saturação por bases</small></button>
+<button type="button" class="tool-btn" data-tool="gessagem" aria-pressed="false"><span class="tool-emoji">🧱</span><span>Gessagem</span><small>Critério de textura</small></button>
+<button type="button" class="tool-btn" data-tool="fertilizante" aria-pressed="false"><span class="tool-emoji">🧪</span><span>Fertilizantes</span><small>Minerais e orgânicos</small></button>
+<button type="button" class="tool-btn" data-tool="pulverizacao" aria-pressed="false"><span class="tool-emoji">💧</span><span>Calda</span><small>Regulagem de aplicação</small></button>
+<button type="button" class="tool-btn" data-tool="produtividade" aria-pressed="false"><span class="tool-emoji">🧑‍🌾📊</span><span>Produtividade</span><small>Estimativa de colheita</small></button>
+</div></section>
+<nav class="workspace-jump" aria-label="Ir para uma etapa do cálculo">
+  <a href="#dados-solo"><strong>03</strong><span>Análise de solo</span></a>
+  <a href="#parametros-operacao"><strong>04</strong><span>Parâmetros da operação</span></a>
+</nav>
+<div class="workspace-grid">
+<section class="work-panel soil-panel" id="dados-solo" aria-labelledby="soilTitle"><div class="panel-head"><div><span class="mini-caption">03 / DADOS DA ANÁLISE DE SOLO</span><h3 id="soilTitle">Análise de solo</h3></div><span class="optional-label">Opcional para alguns cálculos</span></div>
+<p class="workspace-section-intro">Dados laboratoriais reunidos em uma seção própria. Na semeadura, o preenchimento desta etapa é opcional.</p>
+<div id="soilManual" class="soil-content"><div class="field-grid soil-fields">
+<div class="calc-field"><label for="soilPH">pH</label><input id="soilPH" type="text" inputmode="decimal" placeholder="Ex.: 5,2"></div>
+<div class="calc-field"><label for="soilCTC">CTC pH 7 (cmolc/dm³)</label><input id="soilCTC" type="text" inputmode="decimal" placeholder="Ex.: 8,5"></div>
+<div class="calc-field"><label for="soilV">V atual (%)</label><input id="soilV" type="text" inputmode="decimal" placeholder="Ex.: 35"></div>
+<div class="calc-field"><label for="soilClay">Argila (%)</label><input id="soilClay" type="text" inputmode="decimal" placeholder="Ex.: 40"></div>
+<div class="calc-field"><label for="soilCa">Ca (cmolc/dm³)</label><input id="soilCa" type="text" inputmode="decimal" placeholder="Opcional"></div>
+<div class="calc-field"><label for="soilMg">Mg (cmolc/dm³)</label><input id="soilMg" type="text" inputmode="decimal" placeholder="Opcional"></div>
+<div class="calc-field"><label for="soilAl">Al (cmolc/dm³)</label><input id="soilAl" type="text" inputmode="decimal" placeholder="Opcional"></div>
+<div class="calc-field"><label for="soilP">P (mg/dm³)</label><input id="soilP" type="text" inputmode="decimal" placeholder="Método do laudo"></div>
+<div class="calc-field"><label for="soilK">K (mg/dm³)</label><input id="soilK" type="text" inputmode="decimal" placeholder="Unidade do laudo"></div>
+<div class="calc-field"><label for="soilDepth">Camada amostrada</label><select id="soilDepth"><option value="0-20">0–20 cm</option><option value="20-40">20–40 cm</option><option value="outro">Outra</option></select></div>
+</div><p class="inline-hint">Transcreva as unidades exatamente como no laudo. A interpretação de P e K depende do método analítico utilizado.</p></div>
+</section>
+<section class="work-panel operation-panel" id="parametros-operacao" aria-labelledby="operationTitle"><div class="panel-head"><div><span class="mini-caption">04 / PARÂMETROS DA OPERAÇÃO</span><h3 id="operationTitle">Semeadura</h3></div><span class="round-icon" id="operationIcon">🌾</span></div><p id="operationSubtitle" class="section-description">Informe população, espaçamento, germinação e perdas adicionais.</p><div id="operationFields" class="field-grid"></div><div class="actions-row"><button class="calc-primary-btn" type="submit" id="calculateBtn">Calcular <svg class="icon"><use href="#icon-arrow-right"></use></svg></button><button class="calc-secondary-btn" type="button" id="clearResult">Limpar resultado</button></div><div id="formError" class="calc-error" role="alert" hidden></div></section>
+</div>
+<section class="calc-output-panel result-panel" id="resultado-calculo" aria-labelledby="outputTitle"><div class="calc-panel-top"><div><span class="mini-caption">RESULTADO DETALHADO</span><h3 id="outputTitle">Aguardando dados</h3></div><span class="result-state" id="resultState">Pronto para calcular</span></div><div class="result-grid"><div class="main-metric"><span class="metric-eyebrow" id="mainMetricLabel">RESULTADO PRINCIPAL</span><div class="main-metric-amount"><strong id="mainMetric">—</strong><span id="mainUnit"></span></div><p id="metricHint">Preencha os campos e clique em Calcular.</p></div><div class="result-breakdown" id="resultBreakdown"><span>As quantidades da área e os valores complementares serão exibidos aqui.</span></div></div><div class="formula-card"><span class="mini-caption">FÓRMULA E MÉTODO</span><p id="formulaText">Os passos serão mostrados após o cálculo.</p><small id="formulaDetail">As unidades são verificadas antes do resultado.</small></div><div id="resultWarning" class="result-warning">Esta calculadora não substitui recomendação agronômica regional nem análise profissional do solo.</div><div class="result-bottom"><button class="copy-btn" type="button" id="copyResult">Copiar resultado</button><button class="copy-btn" type="button" id="printResult">Imprimir relatório em tabela</button><span id="copyStatus" role="status"></span></div></section>
+
+</main><footer class="site-footer"><span>© LF AgroTech · Ferramentas de apoio ao estudo e planejamento.</span><span>As recomendações devem ser validadas por responsável técnico.</span></footer></div>
+
+<!-- Relatório independente: aparece apenas na impressão ou em Salvar como PDF do navegador. -->
+<section class="print-report" id="printReport" aria-label="Relatório de cálculo agronômico para impressão">
+  <div class="print-report-header"><div><strong class="print-logo">LF <span>AgroTech</span></strong><p>CENTRAL DE CÁLCULOS AGRONÔMICOS</p></div><div class="print-report-heading"><h1 id="printReportTitle">Relatório de cálculo</h1><p id="printReportDate"></p></div></div>
+  <div class="print-report-accent"></div>
+  <h2>1. Identificação da operação</h2>
+  <table class="print-table"><thead><tr><th scope="col">Informação</th><th scope="col">Dados informados</th></tr></thead><tbody id="printContextRows"></tbody></table>
+  <h2>2. Parâmetros utilizados</h2>
+  <table class="print-table"><thead><tr><th scope="col">Parâmetro</th><th scope="col">Valor</th></tr></thead><tbody id="printParameterRows"></tbody></table>
+  <h2>3. Resultados do cálculo</h2>
+  <table class="print-table print-results-table"><thead><tr><th scope="col">Indicador</th><th scope="col">Resultado</th></tr></thead><tbody id="printResultRows"></tbody></table>
+  <h2>4. Fórmula e observações</h2>
+  <table class="print-table"><tbody><tr><th scope="row">Fórmula aplicada</th><td id="printFormula"></td></tr><tr><th scope="row">Método</th><td id="printMethod"></td></tr><tr><th scope="row">Conferência técnica</th><td id="printWarning"></td></tr></tbody></table>
+  <p class="print-report-footer">LF AgroTech · Cálculos matemáticos para planejamento. As faixas de conferência são alertas configuráveis, não recomendações universais de plantio.</p>
+</section>
+</body></html>
